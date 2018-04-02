@@ -4,10 +4,22 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import {
+  LoginComponent,
+  UserProfileComponent
+} from './business/user/index';
+
+import {
+  ActivityListComponent
+} from './business/activities/index';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    ActivityListComponent,
+    AppComponent,
+    LoginComponent,
+    UserProfileComponent
   ],
   imports: [
     BrowserModule
