@@ -7,10 +7,6 @@ import { AppComponent } from './app.component';
 import { appRoutes } from './routes';
 
 import {
-  ActivityListComponent
-} from './business/activities/index';
-
-import {
   LoginComponent,
   UserProfileComponent
 } from './business/user/index';
@@ -21,10 +17,10 @@ import {
 } from './business/membership/index';
 
 import { HomeComponent } from './business/home/home.component';
+import { ActivitiesModule } from './business/activities/activities.module';
 
 @NgModule({
   declarations: [
-    ActivityListComponent,
     AppComponent,
     HomeComponent,
     LoginComponent,
@@ -33,6 +29,7 @@ import { HomeComponent } from './business/home/home.component';
     UserProfileComponent
   ],
   imports: [
+    ActivitiesModule,
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
