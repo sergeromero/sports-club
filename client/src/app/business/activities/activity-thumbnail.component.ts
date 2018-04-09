@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
     selector: 'activity-thumbnail',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ActivityThumbnailComponent implements OnInit {
+    @Input() public activity: any;
+
     constructor() { }
 
     ngOnInit() { }

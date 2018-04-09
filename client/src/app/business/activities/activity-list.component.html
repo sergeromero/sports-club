@@ -1,1 +1,9 @@
 <h1>Activity List</h1>
+
+<section class="activities">
+    <ul>
+        <li class="activity-thumbnail" *ngFor="let activity of activities">
+            <activity-thumbnail [activity]="activity"></activity-thumbnail>
+        </li>
+    </ul>
+</section>

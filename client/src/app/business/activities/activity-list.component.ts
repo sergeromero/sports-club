@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivityService } from '../../core/activities/activity.service';
 
 @Component({
     templateUrl: './activity-list.component.html',
@@ -6,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class ActivityListComponent implements OnInit {
-    constructor() { }
+    public activities: any[];
 
-    ngOnInit() { }
+    constructor(private activityService: ActivityService) { }
+
+    ngOnInit() {
+        this.activities = this.activityService.getActivities();
+     }
 }

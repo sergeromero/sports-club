@@ -18,10 +18,14 @@ import {
 
 import { HomeComponent } from './business/home/home.component';
 import { ActivitiesModule } from './business/activities/activities.module';
+import { Error404Component } from './common/errors/404.component';
+import { ActivityService } from './core/activities/activity.service';
+import { ActivityRouteGuardService } from './core/route-guards/activity-router-guards.service';
 
 @NgModule({
   declarations: [
     AppComponent,
+    Error404Component,
     HomeComponent,
     LoginComponent,
     MembershipInfoComponent,
@@ -33,7 +37,10 @@ import { ActivitiesModule } from './business/activities/activities.module';
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    ActivityRouteGuardService,
+    ActivityService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
